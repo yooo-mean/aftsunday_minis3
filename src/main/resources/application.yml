@@ -1,0 +1,14 @@
+server:
+  port: 8080
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 5GB
+      max-request-size: 5GB
+
+app:
+  storage-root: "./data"      # 로컬 저장 루트(버킷들이 이 아래 폴더로 생성)
+  api-key: "aftsunday&&&" # 쓰기 API 보호용 간단 키
+  presign-secret: "super-secret-for-hmac" # 프리사인드 URL 서명 시크릿
+  presign-default-ttl-seconds: 600         # 10분 기본 만료
